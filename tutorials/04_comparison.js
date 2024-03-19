@@ -20,3 +20,4 @@ if (age >= 18 && hasLicense) {
 } else {
     console.log("You are not allowed to drive a car.");
 }
+
