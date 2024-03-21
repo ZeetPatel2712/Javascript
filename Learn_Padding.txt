@@ -1,0 +1,7 @@
+<!------------------------------ / Array / -------------------------------->
+
+<!-- Learn Spread Operator -->
+<!-- Learn Array Flat Method -->
+<!-- Learn Array From and of Method -->
+
+check to understand batter :- https://www.youtube.com/watch?v=m6azhgyCi-k&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=15&ab_channel=ChaiaurCode

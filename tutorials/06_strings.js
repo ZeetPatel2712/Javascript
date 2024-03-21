@@ -70,16 +70,16 @@ console.log(full_name.trim());
 // it's return character on particular index number
 console.log(full_name.charAt(0));
 
-/** 14 concat */
+/** 14 concat ---------------- */
 // it's join two string
 console.log(full_name.concat(" ", surname));
 
-/** 15 split */
+/** 15 split ---------------- */
 // it's convert string into array
 console.log(full_name.split(""));
 console.log(full_name.split("Z"));
 
-/** 16 slice */
+/** 16 slice ---------------- */
 // it's return create slice from string.
 const greeting = "hy there my name is zeet.";
 console.log(greeting.slice(0, 4));
