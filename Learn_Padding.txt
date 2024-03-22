@@ -1,7 +1,14 @@
 <!------------------------------ / Array / -------------------------------->
 
+<!-- Watch Array All Videos -->
 <!-- Learn Spread Operator -->
-<!-- Learn Array Flat Method -->
-<!-- Learn Array From and of Method -->
 
 check to understand batter :- https://www.youtube.com/watch?v=m6azhgyCi-k&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=15&ab_channel=ChaiaurCode
+
+<!------------------------------ / Object / -------------------------------->
+
+<!-- Learn Object Methods Like Object.crate, Object.assign, Object.freeze, Object.keys, Object.values, Object.entries -->
+
+<!------------------------------ / Watch this video for interview / -------------------------------->
+
+<!-- How does javascript execute code + call stack | chai aur -->
