@@ -33,14 +33,14 @@
 })();
 
 // reduce method --------------------------- //
+// It's use to calculate all values from array
 
 (() => {
-    const num = [1, 2, "3", "4", 5, 6, 7, "8", 9, 10];
-    let convertedNum = [];
+    const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-    num.filter((item) => {
-        if (typeof item === "string") {
-            console.log(item);
-        }
-    });
+    const numVal = num.reduce((item, index) => {
+        return item + index;
+    }, 0);
+
+    console.log(numVal);
 })();
