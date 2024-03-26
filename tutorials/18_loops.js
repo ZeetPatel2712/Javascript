@@ -36,10 +36,17 @@
 })();
 
 // while loop
-(() => {
 
-
-})();
+let index = 0;
+while (index <= 10) {
+    console.log(`hello ${index}`);
+    index += 5;
+}
 
 // do while loop
-(() => {})();
+
+let index2 = 0;
+do {
+    console.log(index2);
+    index2 += 5;
+} while (index2 <= 10);

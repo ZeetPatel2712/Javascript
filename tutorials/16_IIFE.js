@@ -11,6 +11,5 @@
 // This is without name IIFE function
 ((...car) => console.log(`My favorite cars are ${car.join(" | ")}`))("supra", "BMW", "Audi");
 
-
-// simple example of IIFE 
+// simple example of IIFE
 ((greeting) => console.log(`${greeting}}`))("hello");
