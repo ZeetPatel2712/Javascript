@@ -42,7 +42,3 @@ console.log(previousSibling);
 
 const previousElementSibling = document.querySelector(".parent1 .children2").previousElementSibling;
 console.log(previousElementSibling);
-
-// create element method --------------- //
-
-// create text node method --------------- //
