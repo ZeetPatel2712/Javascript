@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To Do List App</title>
+
+        <!-- css -->
+        <link rel="stylesheet" href="src/style.css" />
+
+        <!-- iconoir -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+    </head>
+    <body>
+        <section class="todo_app">
+            <div class="container">
+                <!-- task input -->
+                <div class="input_field">
+                    <textarea
+                        name="task"
+                        id="task"
+                        placeholder="Enter your task"
+                        autocomplete="off"
+                        class="task"
+                    ></textarea>
+                    <i class="iconoir-notes"></i>
+                </div>
+
+                <!-- todo lists -->
+                <ul class="todo_lists"></ul>
+
+                <!-- pending tasks -->
+                <div class="pending_task">
+                    <span>You have <span class="panding_num">no</span> task panding</span>
+                    <button class="clear_btn">clear all</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- script -->
+        <script src="src/script.js"></script>
+    </body>
+</html>

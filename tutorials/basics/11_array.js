@@ -15,6 +15,10 @@ delete myFavHeros[1];
 console.log(favHeros);
 console.log(myFavHeros);
 
+// 03 method 3
+const [sp, su, ba] = favHeros;
+console.log(sp, su, ba);
+
 // array methods ----------------------------------------- //
 
 // 01 sort method -------------- //
