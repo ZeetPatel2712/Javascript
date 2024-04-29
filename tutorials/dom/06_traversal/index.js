@@ -1,4 +1,4 @@
-// parent element and parent node ------------------- //
+insert // parent element and parent node ------------------- //
 const parentElement = document.querySelector(".ch-1.children1").parentElement;
 console.log(parentElement);
 
