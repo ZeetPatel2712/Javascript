@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Random Password Generator</title>
+
+          <!-- css -->
+          <link rel="stylesheet" href="style.css" />
+
+          <!-- iconoir -->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+     </head>
+     <body>
+          <div class="wrapper">
+               <!-- password box -->
+               <div class="password_box">
+                    <input type="text" disabled />
+                    <i class="iconoir-paste-clipboard copy_icon"></i>
+               </div>
+
+               <!-- range box -->
+               <div class="range_box">
+                    <input type="range" min="6" max="16" value="8" />
+                    <span class="slider_number">8</span>
+               </div>
+
+               <!-- generate button -->
+               <button class="generate_btn">Generate Password</button>
+          </div>
+
+          <!-- javascript -->
+          <script src="script.js"></script>
+     </body>
+</html>
