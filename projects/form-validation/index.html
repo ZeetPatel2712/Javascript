@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Form Validation</title>
+
+          <!-- css -->
+          <link rel="stylesheet" href="style.css" />
+
+          <!-- iconoir -->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+     </head>
+     <body>
+          <div class="container">
+               <h1 class="form_title">Sign Up</h1>
+               <form action="#" class="sign_up_form">
+                    <!-- email field -->
+                    <div class="field">
+                         <div class="input_field email_field">
+                              <input type="email" name="email" placeholder="Enter email address." />
+                         </div>
+                         <span class="error email hide">
+                              <i class="iconoir-warning-circle error_icon"></i>
+                              <p class="error_text">Please enter a valid email</p>
+                         </span>
+                    </div>
+
+                    <!-- password field -->
+                    <div class="field">
+                         <div class="input_field password_field">
+                              <input type="password" name="password" placeholder="Enter your password." />
+                              <i class="iconoir-eye pass_eye"></i>
+                         </div>
+                         <span class="error password hide">
+                              <i class="iconoir-warning-circle error_icon"></i>
+                              <p class="error_text">
+                                   Please enter at least 8 character that includes number, symbol, lowercase and
+                                   uppercase character.
+                              </p>
+                         </span>
+                    </div>
+
+                    <!-- confirm field -->
+                    <div class="field">
+                         <div class="input_field confirm_password_field">
+                              <input type="password" name="confirm_password" placeholder="Re enter your password." />
+                              <i class="iconoir-eye pass_eye"></i>
+                         </div>
+                         <span class="error confirm_password hide">
+                              <i class="iconoir-warning-circle error_icon"></i>
+                              <p class="error_text">Please not match. Please enter a valid password.</p>
+                         </span>
+                    </div>
+
+                    <button class="sign_up_btn" type="submit">Sign Up</button>
+               </form>
+          </div>
+          <!-- js -->
+          <script src="script.js"></script>
+     </body>
+</html>

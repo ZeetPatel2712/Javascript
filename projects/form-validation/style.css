@@ -1,0 +1,116 @@
+/* poppins */
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     font-family: poppins;
+}
+
+body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background-color: cornflowerblue;
+}
+
+input,
+button {
+     outline: none;
+     border: none;
+}
+
+button {
+     cursor: pointer;
+}
+
+.container {
+     background-color: #fff;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     padding: 24px;
+     border-radius: 24px;
+     max-width: 500px;
+     width: 100%;
+}
+
+.form_title {
+     font-size: 36px;
+     font-weight: 600;
+     color: #262626;
+     text-align: center;
+     margin-bottom: 32px;
+}
+
+.field {
+     &:not(:last-child) {
+          margin-bottom: 20px;
+     }
+
+     .input_field {
+          position: relative;
+
+          input {
+               width: 100%;
+               padding: 16px 24px;
+               border-radius: 16px;
+               border: 2px solid #262626;
+               color: #262626;
+               font-size: 16px;
+               transform: 0.3s;
+
+               &:hover,
+               &:focus {
+                    border-color: cornflowerblue;
+               }
+          }
+
+          .pass_eye {
+               cursor: pointer;
+               position: absolute;
+               top: 50%;
+               transform: translateY(-50%);
+               right: 24px;
+               font-size: 24px;
+               color: #262626;
+               transition: 0.3s;
+
+               &:hover {
+                    color: cornflowerblue;
+               }
+          }
+     }
+
+     .error {
+          display: flex;
+          gap: 8px;
+          color: crimson;
+          margin-top: 8px;
+          font-size: 16px;
+          font-weight: 500;
+
+          i {
+               margin-top: 4px;
+          }
+
+          &.hide {
+               display: none;
+          }
+     }
+}
+
+.sign_up_btn {
+     width: 100%;
+     background-color: cornflowerblue;
+     color: #fff;
+     padding: 16px 24px;
+     border-radius: 16px;
+     font-size: 16px;
+     font-weight: 500;
+     transition: 0.4s;
+
+     &:hover {
+          background-color: rgb(79, 135, 240);
+     }
+}
