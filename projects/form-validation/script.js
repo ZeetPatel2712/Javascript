@@ -6,62 +6,93 @@ const passEye = document.querySelectorAll(".pass_eye");
 
 // eye open and close logic
 passEye.forEach((item) => {
-     item.addEventListener("click", () => {
-          const passInput = item.previousElementSibling;
+      item.addEventListener("click", () => {
+            const passInput = item.previousElementSibling;
 
-          if (passInput.getAttribute("type") === "text") {
-               passInput.setAttribute("type", "password");
-               item.classList.replace("iconoir-eye-closed", "iconoir-eye");
-          } else {
-               passInput.setAttribute("type", "text");
-               item.classList.replace("iconoir-eye", "iconoir-eye-closed");
-          }
-     });
+            if (passInput.getAttribute("type") === "text") {
+                  passInput.setAttribute("type", "password");
+                  item.classList.replace("iconoir-eye-closed", "iconoir-eye");
+            } else {
+                  passInput.setAttribute("type", "text");
+                  item.classList.replace("iconoir-eye", "iconoir-eye-closed");
+            }
+      });
 });
 
-// run validation form function on click of sign up button.
+// click on sign up button
 signUpForm.addEventListener("submit", (e) => {
-     e.preventDefault();
+      e.preventDefault();
 
-     if (validateField()) {
-          console.log("form valid");
-     }
+      let emptyFieldValidation = false;
+
+      inputField.forEach((item) => {
+            const inputElement = item.querySelector("input");
+            const errorElement = item.nextElementSibling;
+
+            inputElement.value.trim().length <= 0
+                  ? errorElement.classList.remove("hide")
+                  : (emptyFieldValidation = true);
+      });
+
+      console.log(formValidation());
+
+      //  if (formValidation() && emptyFieldValidation) {
+      //        console.log("form submitted 🚀.");
+      //  } else {
+      //        console.log("something wrong 😔.");
+      //  }
 });
 
-// run validation form function on write of all input field
-inputField.forEach((item) => {
-     item.addEventListener("keyup", () => {
-          validateField();
-     });
-});
+// form validation logic
+const formValidation = () => {
+      let validationAns = false;
 
-const validateField = () => {
-     let validation = false;
+      inputField.forEach((item) => {
+            const inputElement = item.querySelector("input").value.trim();
+            const elementName = item.querySelector("input").getAttribute("name");
+            const errorElement = item.nextElementSibling;
 
-     inputField.forEach((item) => {
-          const inputElement = item.querySelector("input");
-          const inputElementName = item.querySelector("input").getAttribute("name");
-          const errorElement = item.nextElementSibling;
+            if (elementName === "email") {
+                  const emailPattern =
+                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-          if (inputElementName === "email") {
-               inputElement.value
-                    .trim()
-                    .match(
-                         /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-                    )
-                    ? console.log("email valid")
-                    : console.error("email not valid");
-          }
+                  if (!inputElement.match(emailPattern)) {
+                        errorElement.classList.remove("hide");
+                  } else {
+                        errorElement.classList.add("hide");
+                  }
+            }
 
-          if (inputElementName === "password") {
-               inputElement.value.trim().match(/^[a-zA-Z0-9!@#$%^&*]{6,16}$/)
-                    ? console.log("password valid")
-                    : console.error("password not valid");
-          }
+            if (elementName === "password") {
+                  const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-          if (inputElementName === "confirm_password") {
-          }
-     });
+                  if (!inputElement.match(passwordPattern)) {
+                        errorElement.classList.remove("hide");
+                  } else {
+                        errorElement.classList.add("hide");
+                  }
+            }
 
-     return validation;
+            if (elementName === "confirm_password") {
+                  const passwordValue = document.querySelector(".password_field input").value.trim();
+
+                  if (inputElement.length === 0) {
+                        errorElement.classList.remove("hide");
+                  } else if (passwordValue !== inputElement) {
+                        errorElement.classList.remove("hide");
+                  } else {
+                        errorElement.classList.add("hide");
+                  }
+            }
+      });
+
+      return validationAns;
 };
+
+// form validation when write on input
+inputField.forEach((item) => {
+      const inputElement = item.querySelector("input");
+      inputElement.addEventListener("keyup", () => {
+            formValidation();
+      });
+});
