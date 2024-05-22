@@ -2,116 +2,123 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
 * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: poppins;
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     font-family: poppins;
 }
 
 body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #010101;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background-color: #010101;
 }
 
 input,
 button {
-      outline: none;
-      border: none;
+     outline: none;
+     border: none;
 }
 
 button {
-      cursor: pointer;
+     cursor: pointer;
 }
 
 .container {
-      background-color: #101010;
-      padding: 24px;
-      border-radius: 24px;
-      max-width: 500px;
-      width: 100%;
-      border: 1px solid #262626;
+     background-color: #101010;
+     padding: 24px;
+     border-radius: 24px;
+     max-width: 500px;
+     width: 100%;
+     border: 1px solid #262626;
 }
 
 .form_title {
-      font-size: 36px;
-      font-weight: 600;
-      color: #ffffff;
-      text-align: center;
-      margin-bottom: 32px;
+     font-size: 36px;
+     font-weight: 600;
+     color: #ffffff;
+     text-align: center;
+     margin-bottom: 32px;
 }
 
 .field {
-      &:not(:last-child) {
-            margin-bottom: 20px;
-      }
+     &:not(:last-child) {
+          margin-bottom: 20px;
+     }
 
-      .input_field {
-            position: relative;
+     .input_field {
+          position: relative;
 
-            input {
-                  width: 100%;
-                  padding: 16px 24px;
-                  border-radius: 16px;
-                  border: 2px solid #262626;
-                  color: #ffffff;
-                  font-size: 16px;
-                  transition: 0.3s;
-                  background-color: #010101;
+          input {
+               width: 100%;
+               padding: 16px 24px;
+               border-radius: 16px;
+               border: 2px solid #262626;
+               color: #ffffff;
+               font-size: 16px;
+               transition: 0.3s;
+               background-color: #010101;
 
-                  &:hover,
-                  &:focus {
-                        border-color: cornflowerblue;
-                  }
-            }
+               &:hover,
+               &:focus {
+                    border-color: cornflowerblue;
+               }
+          }
 
-            .pass_eye {
-                  cursor: pointer;
-                  position: absolute;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  right: 24px;
-                  font-size: 24px;
-                  color: #ffffff;
-                  transition: 0.3s;
+          .pass_eye {
+               cursor: pointer;
+               position: absolute;
+               top: 50%;
+               transform: translateY(-50%);
+               right: 24px;
+               font-size: 24px;
+               color: #ffffff;
+               transition: 0.3s;
 
-                  &:hover {
-                        color: cornflowerblue;
-                  }
-            }
-      }
+               &:hover {
+                    color: cornflowerblue;
+               }
+          }
+     }
 
-      .error {
-            display: flex;
-            gap: 8px;
-            color: crimson;
-            margin-top: 8px;
-            font-size: 16px;
-            font-weight: 500;
+     .input_msg {
+          display: flex;
+          gap: 8px;
+          margin-top: 8px;
+          font-size: 16px;
+          font-weight: 500;
 
-            i {
-                  margin-top: 4px;
-            }
+          i {
+               margin-top: 4px;
+          }
 
-            &.hide {
-                  display: none;
-            }
-      }
+          &.hide {
+               display: none;
+          }
+
+          &.error {
+               color: crimson;
+          }
+
+          &.success {
+               color: rgb(18, 209, 43);
+          }
+     }
 }
 
 .sign_up_btn {
-      width: 100%;
-      background-color: cornflowerblue;
-      color: #fff;
-      padding: 16px 24px;
-      border-radius: 16px;
-      font-size: 16px;
-      font-weight: 500;
-      transition: 0.4s;
+     width: 100%;
+     background-color: cornflowerblue;
+     color: #fff;
+     padding: 16px 24px;
+     border-radius: 16px;
+     font-size: 16px;
+     font-weight: 500;
+     transition: 0.4s;
 
-      &:hover {
-            background-color: rgb(79, 135, 240);
-      }
+     &:hover {
+          background-color: rgb(79, 135, 240);
+     }
 }
