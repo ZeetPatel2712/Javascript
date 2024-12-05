@@ -1,0 +1,110 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+}
+
+body {
+	/* 3. Add accessible line-height */
+	line-height: 1.5;
+	/* 4. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+button {
+	outline: transparent;
+	border: transparent;
+	cursor: pointer;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	height: 100svh;
+	color: #ffffff;
+	background: #262626;
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+
+		.notification {
+			position: relative;
+
+			.badge {
+				position: absolute;
+				top: -6px;
+				right: -6px;
+				padding: 4px 6px;
+				background: red;
+				font-size: 12px;
+				font-weight: 600;
+				border-radius: 100px;
+			}
+		}
+
+		.notification-btn {
+			background: seagreen;
+			padding: 8px 16px;
+		}
+	}
+}
