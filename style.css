@@ -1,0 +1,17 @@
+.wrapper {
+    background: red;
+    padding: 10px;
+    display: flex flex;
+
+    .inner {
+        padding: 20px;
+    }
+
+    .inner-1 {
+        background: green;
+    }
+
+    .inner-2 {
+        background: blue;
+    }
+}
